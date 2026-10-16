@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Arrow from "../components/arrow";
+import { DONATE_EMAIL, EMAIL } from "../lib/site";
+export const metadata: Metadata={title:"Donate"};
+export default function Donate(){return <main id="main" tabIndex={-1}><section className="container donate-layout"><div className="donate-copy"><h1>A little support.<br/>A <span>hometown</span><br/>of possibility.</h1><p className="lead">Help support Lisa Pearl’s campaign for Clarkson Mayor.</p><p>To ask about making a contribution, contact Lisa directly for current donation options and instructions.</p><a className="button" href={DONATE_EMAIL}>Ask about contributing <Arrow/></a><p className="small-note">This opens your email app. Online donations are not available through this preview.</p></div><aside className="donate-panel"><h2>Let’s move<br/>forward,<br/>together.</h2><div className="panel-contact"><p>Contribution questions?</p><a href={DONATE_EMAIL}>{EMAIL}</a></div></aside></section><section className="container ways-to-help"><h2>There’s more than one<br/>way to show your support.</h2><p>Interested in lending a hand or learning how to get involved? <Link href="/contact">Connect with Lisa.</Link></p></section></main>}
